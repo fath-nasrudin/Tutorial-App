@@ -8,7 +8,12 @@ Check the documentation link below if you wanna use this API.
 
 ## Installation
 
-after you clone this repo, you can go to the main directory then start the development mode
+after you clone this repo, you can go to the main directory then copy .env.example file to .env with 
+
+```bash 
+cp .env.example .env
+```
+then start the development mode
 
 ```bash
 npm run dev

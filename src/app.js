@@ -5,6 +5,7 @@ const swaggerUI = require('swagger-ui-express');
 const db = require('./models');
 const routes = require('./routes');
 const docs = require('../docs');
+const config = require('./config');
 
 // establish connection to dabase
 db.mongoose
@@ -43,7 +44,7 @@ app.get('/', (req, res) => {
 app.use('/api', routes);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(docs));
 
-const PORT = process.env.PORT || 3030;
+const PORT = config.port;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
